@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=65.5.0", "wheel>=0.38.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "search-engine-ui"
+version = "0.1.0"
+description = "Gradio frontend for the Semantic Search Engine API"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "gradio>=5.0.0",
+    "httpx>=0.28.0",
+    "pandas>=2.2.0",
+]
+
+[tool.setuptools]
+py-modules = ["app", "client"]
