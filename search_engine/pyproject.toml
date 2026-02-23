@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=65.5.0", "wheel>=0.38.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "search-engine"
+version = "0.1.0"
+description = "Semantic similarity search engine API powered by sentence-transformers"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "datasets>=3.0.0",
+    "fastapi>=0.115.0",
+    "pydantic-settings>=2.7.0",
+    "sentence-transformers>=3.4.1",
+    "uvicorn>=0.34.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
