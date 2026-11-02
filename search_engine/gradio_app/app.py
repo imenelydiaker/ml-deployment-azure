@@ -179,6 +179,7 @@ with gr.Blocks(
         browse_table = gr.Dataframe(
             headers=["#", "Sentence"],
             interactive=False,
+            wrap=True,
         )
         with gr.Row():
             browse_prev_btn = gr.Button("⬅️ Previous", scale=1)
@@ -211,6 +212,8 @@ with gr.Blocks(
         search_table = gr.Dataframe(
             headers=["Rank", "Sentence", "Score"],
             interactive=False,
+            wrap=True,
+            column_widths=["8%", "80%", "12%"],
         )
         search_btn.click(fn=run_search, inputs=[search_query, search_k], outputs=[search_summary, search_table])
 
