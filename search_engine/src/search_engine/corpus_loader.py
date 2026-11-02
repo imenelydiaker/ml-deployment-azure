@@ -23,7 +23,7 @@ def load_corpus() -> list[str]:
     logger.info("Loading AG News dataset (first %d samples) …", num_samples)
 
     ds = load_dataset(
-        "ag_news",
+        "fancyzhx/ag_news",
         split=f"test[:{num_samples}]",
     )
 
